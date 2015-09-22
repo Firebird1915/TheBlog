@@ -16,15 +16,21 @@ def writePostEntry(entry):
 	datedfile = str(d.year) + "-" + str(d.month) + "-" + str(d.day) + "-" + entry['title']['$t'].strip().replace(" ", "-")
 	path = POST_DIR + datedfile + '.html'
 	post = open(path,'w')
+
+
+
 	post.write("---\n")
-	post.write("layout: post\n")
+	post.write("layout: default\n")
 	post.write("title: \"%s\"\n" % entry['title']['$t'])
 	post.write("---\n")
+	post.write("<section class='main-content'>")
 	post.write(entry['content']['$t'])
+	post.write("<h1 class='page-heading'>%s</h1>" % entry['title']['$t'])
 	#dateparser.parse(u'2015-09-17T04:05:53.528-04:00')
 	#print(data['feed']['updated']['$t'])
 	#entry['updated']
 	#entry['published']
+	post.write("</section>")
 	post.close()
 
 def updateGroveBog():
