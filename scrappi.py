@@ -18,7 +18,7 @@ def writePostEntry(entry):
 	path = POST_DIR + datedfile + '.html'
 	post = open(path,'w')
 	post.write("---\n")
-	post.write("layout: default\n")
+	post.write("layout: post\n")
 	post.write("title: \"%s\"\n" % entry['title']['$t'])
 	post.write("---\n")
 	post.write("<section class='main-content'>")
