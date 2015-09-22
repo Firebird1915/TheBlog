@@ -2,8 +2,8 @@
 title: Firebird 1915 Blog
 email: first.firebird1915@gmail.com
 description: > # The McKinley Firebird Robotics Team Blog.
-baseurl: "/TheBlog/" # the subpath of your site, e.g. /blog/
-url: "http://mckinleyfirebirds.com" # the base hostname & protocol for your site
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://blog.mckinleyfirebirds.com" # the base hostname & protocol for your site
 twitter_username: firebird1915
 github_username:  firebird1915
 
