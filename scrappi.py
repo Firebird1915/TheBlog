@@ -24,8 +24,8 @@ def writePostEntry(entry):
 	post.write("title: \"%s\"\n" % entry['title']['$t'])
 	post.write("---\n")
 	post.write("<section class='main-content'>")
-	post.write(entry['content']['$t'])
 	post.write("<h1 class='page-heading'>%s</h1>" % entry['title']['$t'])
+	post.write(entry['content']['$t'])
 	#dateparser.parse(u'2015-09-17T04:05:53.528-04:00')
 	#print(data['feed']['updated']['$t'])
 	#entry['updated']
