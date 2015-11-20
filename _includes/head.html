@@ -10,5 +10,21 @@
 	<link rel="stylesheet" type="text/css" href="/css/site.css" media="screen">
 	<meta name="description" content="{{ site.description }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("body").css("display", "none");
+			$("body").fadeIn(2000);
+
+			$("a").click(function(event){
+				event.preventDefault();
+				linkLocation = this.href;
+				$("body").fadeOut(1000, redirectPage);
+			});
+			function redirectPage() {
+				window.location = linkLocation;
+			}
+		});
+	</script>
 </head>
     
